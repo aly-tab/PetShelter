@@ -12,7 +12,7 @@ const IndexView = () => {
 
                 response.data.sort(function (a, b) {
                     if (a.type.toLowerCase() === b.type.toLowerCase()) {
-                        return b.name.toLowerCase() - a.name.toLowerCase();
+                        return a.name.toLowerCase() - b.name.toLowerCase();
                      }
                      return a.type.toLowerCase() > b.type.toLowerCase() ? 1 : -1;
                 });

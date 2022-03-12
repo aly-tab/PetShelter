@@ -30,6 +30,7 @@ const EditView = () => {
         axios.put('/api/exam/' + id, data)
             .then(response => {
                 console.log(response);
+                history.push("/");
             })
             .catch((err) => {
                 const errorResponse = err.response.data.errors; 

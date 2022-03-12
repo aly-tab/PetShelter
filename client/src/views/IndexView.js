@@ -11,7 +11,7 @@ const IndexView = () => {
                 console.log(response);
 
                 response.data.sort(function (a, b) {
-                    return a.type.toLowerCase().localeCompare(b.type.toLowerCase());
+                    return a.type.toLowerCase().localeCompare(b.type.toLowerCase()) || b.name.toLowerCase() - a.name.toLowerCase();
                 });
 
                 setPets(response.data);

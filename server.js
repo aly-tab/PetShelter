@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 require('./server/config/mongoose.config');
 const cors = require('cors');
-app.use(cors({origin: process.env.REACT_URI}));
+app.use(cors({credentials: true, origin: process.env.REACT_URI}));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));

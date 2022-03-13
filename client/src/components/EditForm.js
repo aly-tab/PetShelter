@@ -32,38 +32,46 @@ const EditForm = props => {
 
     return (
         <form onSubmit={e => { onSubmitHandler(e, {name, type, description, skill1, skill2, skill3} ) } }>
-            <p>
-                <p>Pet Name:</p>
-                <input type="text" value={name} name="name" onChange={(e)=>{setName(e.target.value)}}/>
-            </p>
-            <p>
-                <p>Pet Type:</p>
-                <input type="text" value={type} name="type" onChange={(e)=>{setType(e.target.value)}}/>
-            </p>
-            <p>
-                <p>Pet Description:</p>
-                <input type="text" value={description} name="description" onChange={(e)=>{setDescription(e.target.value)}}/>
-            </p>
-            <p>
-                <p>Skill 1:</p>
-                <input type="text" value={holdSkill1} name="skill1" onChange={(e)=>{
-                    setSkill1(e.target.value)
-                    setHoldSkill1(e.target.value)}
-                    }/>
-            </p>
-            <p>
-                <p>Skill 2:</p>
-                <input type="text" value={holdSkill2} name="skill2" onChange={(e)=>{
-                    setSkill2(e.target.value)
-                    setHoldSkill2(e.target.value)}}/>
-            </p>
-            <p>
-                <p>Skill 3:</p>
-                <input type="text" value={holdSkill3} name="skill3" onChange={(e)=>{
-                    setSkill3(e.target.value)
-                    setHoldSkill3(e.target.value)}}/>
-            </p>
-            <input type="submit" value="Edit Pet"/>
+            <div id="form">
+                <div id="row">
+                    <p>
+                        <p>Pet Name:</p>
+                        <input type="text" value={name} name="name" onChange={(e)=>{setName(e.target.value)}}/>
+                    </p>
+                    <p>
+                        <p>Pet Type:</p>
+                        <input type="text" value={type} name="type" onChange={(e)=>{setType(e.target.value)}}/>
+                    </p>
+                    <p>
+                        <p>Pet Description:</p>
+                        <input type="text" value={description} name="description" onChange={(e)=>{setDescription(e.target.value)}}/>
+                    </p>
+                </div>
+                <div id="row">
+                    <p>
+                        <p>Skill 1:</p>
+                        <input type="text" value={holdSkill1} name="skill1" onChange={(e)=>{
+                            setSkill1(e.target.value)
+                            setHoldSkill1(e.target.value)}
+                            }/>
+                    </p>
+                    <p>
+                        <p>Skill 2:</p>
+                        <input type="text" value={holdSkill2} name="skill2" onChange={(e)=>{
+                            setSkill2(e.target.value)
+                            setHoldSkill2(e.target.value)}}/>
+                    </p>
+                    <p>
+                        <p>Skill 3:</p>
+                        <input type="text" value={holdSkill3} name="skill3" onChange={(e)=>{
+                            setSkill3(e.target.value)
+                            setHoldSkill3(e.target.value)}}/>
+                    </p>
+                </div>
+            </div>
+            <div id="input-btn">
+                <input type="submit" value="Edit Pet" class="form-btn"/>
+            </div>
         </form>
     )
 }

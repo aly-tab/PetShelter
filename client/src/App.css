@@ -1,38 +1,128 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(255, 196, 0);
+}
+
+#banner {
+  background-color: black;
+  height: 200px;
+}
+
+#banner h1 {
+  color: rgb(255, 196, 0);
   text-align: center;
+  font-size: 4em;
+  font-weight: 800;
+  padding: 60px 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#top-link {
+  background-color: rgb(255, 166, 0);
+  text-align: center;
+  height: 100px;
+  padding: 20px 0 0 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.link {
+  text-decoration: none;  
+  color: rgb(0, 102, 255);
+  font-size: 2.4em;
+  font-weight: 500;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.link:hover {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+#top-desc {
+  text-align: center;
+  padding: 50px 0 30px 0;
+  font-size: 2.4em;
+  font-weight: 800;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.table {
+  background-color: rgb(255, 242, 129);
+  border: 5px solid black;
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+#front-page {
+  padding: 0 300px;
+}
+
+.link-tb {
+  text-decoration: none;  
+  color: rgb(0, 102, 255);
+}
+
+.link-tb:hover { 
+  color: white;
+}
+
+#form {
+  display: flex;
+  width: 600px;
+  justify-content: space-between;
+  margin: 60px auto 0 auto;
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+input {
+  border: 5px solid black;
+}
+
+.form-btn {
+  background-color: white;
+  padding: 10px 20px;
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+.form-btn:hover {
+  color: rgb(0, 102, 255);
+  border: 5px solid rgb(0, 102, 255);
+}
+
+#input-btn {
+  text-align: center;
+  margin-top: 40px;
+}
+
+#top-desc, h3 {
+  text-align: center;
+  padding: 30px 0 0 0;
+  font-size: 2.4em;
+  font-weight: 800;
+}
+
+button {
+  background-color: white;
+  padding: 10px 20px;
+  font-size: 1.5em;
+  font-weight: 600; 
+  border: 5px solid black; 
+}
+
+button:hover {
+  color: rgb(0, 102, 255);
+  border: 5px solid rgb(0, 102, 255);
+}
+
+#button {
+  text-align: center;
+  margin-top: 50px;
+}
+
+#pet-info {
+  width: 270px;
+  margin: 50px auto 0 auto;
+  font-weight: 600;
+  font-size: 1.6em;
 }

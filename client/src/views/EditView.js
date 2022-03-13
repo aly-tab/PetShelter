@@ -46,8 +46,12 @@ const EditView = () => {
     return (
         <div>
             <div id="header">
-                <h1>Pet Shelter</h1>
-                <Link to="/">back to home</Link>
+                <div id="banner">
+                    <h1>Pet Shelter</h1>
+                </div>
+                <div id="top-link">
+                    <Link to="/" class="link">back to home</Link>
+                </div>
             </div>
             <h3>Edit {pet.name}</h3>
             {errors.map((err, index) => <p key={index}>{err}</p>)}

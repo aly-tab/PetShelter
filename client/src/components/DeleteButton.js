@@ -18,7 +18,9 @@ const DeleteButton = props => {
             })
     }
     return (
-        <button onClick={onClickHandler}>Adopt {name}</button>
+        <div id="button">
+            <button onClick={onClickHandler}>Adopt {name}</button>
+        </div>
     )
 }
 

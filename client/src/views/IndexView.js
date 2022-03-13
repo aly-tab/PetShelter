@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.css';
+import '../App.css';
 
 const IndexView = () => {
     const [pets, setPets] = useState([]);
@@ -24,16 +26,21 @@ const IndexView = () => {
     return (
         <div>
             <div id="header">
-            <h1>Pet Shelter</h1>
-            <Link to="/pets/new">add a pet to the shelter</Link>
+                <div id="banner">
+                    <h1>Pet Shelter</h1>
+                </div>
+                <div id="top-link">
+                    <Link to="/pets/new" class="link">add a pet to the shelter</Link>
+                </div>
             </div>
-            <p>These pets are looking for a good home</p>
-            <table>
+            <p id="top-desc">These pets are looking for a good home</p>
+            <div id="front-page">
+            <table class="table">
                 <thead>
                     <tr>
-                        <th>Name</th>
-                        <th>Type</th>
-                        <th>Actions</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Type</th>
+                        <th scope="col">Actions</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -42,12 +49,13 @@ const IndexView = () => {
                         <tr key={index}>
                             <td>{pet.name}</td>
                             <td>{pet.type}</td>
-                            <td><Link to={"/pets/" + pet._id}>details</Link> <Link to={"/pets/" + pet._id + "/edit"}>edit</Link></td>
+                            <td><Link to={"/pets/" + pet._id} class="link-tb">details</Link> <Link to={"/pets/" + pet._id + "/edit"} class="link-tb">edit</Link></td>
                         </tr>
                     )
                 })}
                 </tbody>
             </table>
+            </div>
         </div>
     )
 }

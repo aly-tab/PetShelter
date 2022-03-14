@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import EditForm from '../components/EditForm';
 import axios from 'axios';
 import { Link, useHistory, useParams } from 'react-router-dom';
+import '../App.css';
 
 
 const EditView = () => {

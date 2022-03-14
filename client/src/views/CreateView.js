@@ -2,6 +2,7 @@ import axios from 'axios';
 import React , { useState } from 'react';
 import AddForm from '../components/AddForm';
 import { Link, useHistory } from 'react-router-dom';
+import '../App.css';
 
 const CreateView = () => {
     const history = useHistory();

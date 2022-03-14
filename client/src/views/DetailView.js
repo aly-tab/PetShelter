@@ -2,6 +2,7 @@ import React, { useState, useEffect }from 'react';
 import DeleteButton from '../components/DeleteButton';
 import axios from 'axios';
 import { Link, useHistory, useParams } from 'react-router-dom';
+import '../App.css';
 
 const DetailView = () => {
     const { id } = useParams();

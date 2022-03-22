@@ -288,4 +288,9 @@ img {
   text-align: center;
 }
 
+.btn-btn-primary:hover {
+  color: rgb(0, 102, 255);
+  border: 5px solid rgb(0, 102, 255);
+}
+
 

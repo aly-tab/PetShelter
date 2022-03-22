@@ -48,7 +48,9 @@ const Login = () => {
                     <p>Password</p>
                     <input type="password" className="form-control" name="password" onChange={changehandler}/>
                 </div>
-                <input type="submit" value="login" className="btn-btn-primary" />
+                <div id="logreg">
+                    <input type="submit" value="login" className="btn-btn-primary" />
+                </div>
             </form>
         </div>
     )

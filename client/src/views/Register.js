@@ -67,7 +67,9 @@ const Register = () => {
                     <input type="password" className="form-control" name="confirmPassword" onChange={changehandler}/>
                     {/*{errors.confirmPassword? <p className="text-danger">{errors.confirmPassword.message}</p>:""}*/}
                 </div>
-                <input type="submit" value="sign up" className="btn-btn-primary" />
+                <div id="logreg">
+                    <input type="submit" value="sign up" className="btn-btn-primary" />
+                </div>
             </form>
         </div>
     )

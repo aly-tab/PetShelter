@@ -1,26 +1,24 @@
 import axios from 'axios';
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 
-const DeleteButton = props => {
+const DeleteAccount = props => {
     const { id } = props;
-    const {removeFromDom } = props;
-    const { name } = props
+    const history = useHistory();
 
     const onClickHandler = e => {
-        axios.delete('/api/shelter/' + id)
+        axios.delete('/api/user/' + id)
             .then(response => {
                 console.log(response);
-                removeFromDom(id);
+                history.push('/');
             })
             .catch(err => {
                 console.log(err);
             })
     }
     return (
-        <div id="button">
-            <button onClick={onClickHandler}>delete</button>
-        </div>
+        <button className="delete" onClick={onClickHandler}>Delete Account</button>
     )
 }
 
-export default DeleteButton;
+export default DeleteAccount;

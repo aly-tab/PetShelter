@@ -4,9 +4,16 @@ require('./server/config/mongoose.config');
 const cors = require('cors');
 app.use(cors({credentials: true, origin: process.env.REACT_URI}));
 
+const cookieParser = require('cookie-parser');
+
+require('dotenv').config();
+
+app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-require('./server/routes/exam.routes')(app);
+require('./server/routes/shelter.routes')(app);
+require('./server/routes/login.routes')(app);
+require('./server/routes/user.routes')(app);
 
 const port = process.env.PORT || 5000
 

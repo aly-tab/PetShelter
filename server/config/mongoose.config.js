@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 mongoose.set('runValidators', true);
 
-mongoose.connect("mongodb+srv://root:Dolphin76@cluster0.bkwqu.mongodb.net/Cluster0?retryWrites=true&w=majority", {
+mongoose.connect("mongodb+srv://root:Dolphin76@cluster0.nx8ke.mongodb.net/Cluster0?retryWrites=true&w=majority", {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })

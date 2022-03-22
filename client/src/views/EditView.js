@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import EditForm from '../components/EditForm';
 import axios from 'axios';
-import { Link, useHistory, useParams } from 'react-router-dom';
 import '../App.css';
+import { Link, useHistory, useParams } from 'react-router-dom';
 
 
 const EditView = () => {
@@ -12,11 +12,13 @@ const EditView = () => {
     const [loaded, setLoaded] = useState(false);
     const [errors, setErrors] = useState([]);
     useEffect(() => {
-        axios.get('/api/exam/' + id)
+        axios.get('/api/shelter/' + id)
             .then(response => {
                 console.log(response);
                 if (response.data.name === "CastError") {
                     history.push("/");
+                } else if (response.data.poster_id !== response.data.owner_id) {
+                    history.push("/"); 
                 }
                 setPet(response.data);
                 setLoaded(true);
@@ -28,7 +30,7 @@ const EditView = () => {
 
     const onSubmitHandler = (e, data) => {
         e.preventDefault();
-        axios.put('/api/exam/' + id, data)
+        axios.put('/api/shelter/' + id, data)
             .then(response => {
                 console.log(response);
                 history.push("/");

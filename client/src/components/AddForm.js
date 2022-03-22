@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 
 const AddForm = props => {
-    const { onSubmitHandler, initialName, initialType, initialDescription, initialSkill1, initialSkill2, initialSkill3 } = props
+    const { onSubmitHandler, initialImage, initialName, initialType, initialDescription, initialSkill1, initialSkill2, initialSkill3, poster_id, owner_id } = props
+    const [image, setImage] = useState(initialImage);
     const [name, setName] = useState(initialName);
     const [type, setType] = useState(initialType);
     const [description, setDescription] = useState(initialDescription);
@@ -10,7 +11,11 @@ const AddForm = props => {
     const [skill3, setSkill3] = useState(initialSkill3);
 
     return (
-        <form onSubmit={e => { onSubmitHandler(e, {name, type, description, skill1, skill2, skill3} ) } }>
+        <form onSubmit={e => { onSubmitHandler(e, {image, name, type, description, skill1, skill2, skill3, poster_id, owner_id} ) } }>
+            <div id="img-field" >
+                <p>Add an Image Link (Optional):</p>
+                <input type="text" value={image} onChange={(e)=>{setImage(e.target.value)}}/>
+            </div>
             <div id="form">
                 <div id="row">
                     <p>
@@ -40,7 +45,9 @@ const AddForm = props => {
                         <input type="text" value={skill3} name="skill3" onChange={(e)=>{setSkill3(e.target.value)}}/>
                     </p>
                 </div>
-            </div>
+                <input type="hidden" value={poster_id} name="poster_id"/>
+                <input type="hidden" value={owner_id} name="owner_id"/>
+            </div>           
             <div id="input-btn">
             <input type="submit" value="Add Pet" class="form-btn"/>
             </div>

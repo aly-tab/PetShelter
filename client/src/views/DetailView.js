@@ -1,5 +1,7 @@
 import React, { useState, useEffect }from 'react';
-import DeleteButton from '../components/DeleteButton';
+import AdoptButton from '../components/AdoptButton';
+import DetailDeleteButton from '../components/DetailDeleteButton';
+import Detail from '../components/Detail';
 import axios from 'axios';
 import { Link, useHistory, useParams } from 'react-router-dom';
 import '../App.css';
@@ -8,9 +10,21 @@ const DetailView = () => {
     const { id } = useParams();
     const history = useHistory();
     const [ pet, setPet ] = useState({});
+    const [loggedInUser, setLoggedInUser] = useState(null);
+
+    useEffect(() => {
+        axios.get("/api/users/loggedIn", {withCredentials:true})
+            .then(res => {
+                console.log(res.data);
+                setLoggedInUser(res.data);
+            })
+            .catch(err => {
+                console.log(err);;
+            })
+    }, [])
     
     useEffect(() => {
-        axios.get('/api/exam/' + id)
+        axios.get('/api/shelter/' + id)
             .then(response => {
                 console.log(response);
                 if (response.data.name === "CastError") {
@@ -22,6 +36,7 @@ const DetailView = () => {
                 console.log(err);
             })
     }, [])
+
     return (
         <div>
             <div id="header">
@@ -33,26 +48,14 @@ const DetailView = () => {
                 </div>
             </div>
             <div>
-                <h3>Details about {pet.name}</h3>    
-                <DeleteButton id={pet._id} name={pet.name}/>          
+                <h3>Details about {pet.name}</h3>                       
             </div>
-            <div id="pet-info">
-                <p>Pet type: {pet.type}</p>           
-                <p>Description: {pet.description}</p>
-                <p>Skills:</p>
-                { pet.skill1 === ""?
-                    <p>Nothing</p>:
-                    <p>{pet.skill1}</p>
-                }
-                { pet.skill2 === ""?
-                    <p>Nothing</p>:
-                    <p>{pet.skill2}</p>
-                }
-                { pet.skill3 === ""?
-                    <p>Nothing</p>:
-                    <p>{pet.skill3}</p>
-                }
-            </div>
+            <Detail pet={pet} poster_id={pet.poster_id} owner_id={pet.owner_id} />
+            {loggedInUser && pet.poster_id === pet.owner_id && loggedInUser._id !== pet.poster_id?
+                <AdoptButton id={pet._id} name={pet.name} owner_id={loggedInUser._id} />  
+                : loggedInUser && pet.poster_id === pet.owner_id && loggedInUser._id === pet.poster_id?<DetailDeleteButton id={pet._id} class="link-tb"/>
+                : ""
+            }   
         </div>
     )
 }

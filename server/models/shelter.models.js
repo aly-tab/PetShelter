@@ -1,6 +1,9 @@
 const mongoose = require('mongoose');
 
-const ExamSchema = new mongoose.Schema({
+const ShelterSchema = new mongoose.Schema({
+    image: {
+        type: String
+    },
     name: {
         type: String,
         required: [
@@ -36,14 +39,21 @@ const ExamSchema = new mongoose.Schema({
     },
     skill1: {
         type: String,
-
     },
     skill2: {
         type: String,
     },
     skill3: {
         type: String,
+    },
+    poster_id: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "User"
+    },
+    owner_id: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "User"  
     }
-}, {timesteamps: true})
+}, {timestamps: true});
 
-module.exports.Exam = mongoose.model('Exam', ExamSchema);
+module.exports.Shelter = mongoose.model('Shelter', ShelterSchema);

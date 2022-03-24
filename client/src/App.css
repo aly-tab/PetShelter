@@ -218,6 +218,10 @@ input[type="submit"] {
   color: black !important;
 }
 
+input[type="submit"]:hover {
+  color: rgb(0, 102, 255);
+}
+
 img {
   margin-bottom: 35px;
   width: 90%;

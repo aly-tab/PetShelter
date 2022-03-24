@@ -127,7 +127,7 @@ const Account = () => {
                 <div id="account-page">
                     <div className="container">
                         <h2>Pets You Own</h2>
-                        <div className="cont">
+                        <div className="cont-1">
                             <table class="table" id="diff">
                                 <thead>
                                     <tr>
@@ -159,7 +159,7 @@ const Account = () => {
                     </div>
                     <div class="container">
                         <h2>Pets You Posted</h2>
-                        <div className="cont">
+                        <div className="cont-2">
                             <table class="table" id="diff">
                                 <thead>
                                     <tr>

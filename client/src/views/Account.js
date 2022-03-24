@@ -126,6 +126,7 @@ const Account = () => {
                 <h1 id="hello">Hello {loggedInUser.username}</h1>
                 <div id="account-page">
                     <div className="container">
+                        <div>
                         <h2>Pets You Own</h2>
                         <div className="cont-1">
                             <table class="table" id="diff">
@@ -156,8 +157,10 @@ const Account = () => {
                             {pets1length > 10?
                             <Link to={"/pets/owned/" + id} className="link-tb">More</Link>: ""}
                         </div>
+                        </div>
                     </div>
                     <div class="container">
+                        <div>
                         <h2>Pets You Posted</h2>
                         <div className="cont-2">
                             <table class="table" id="diff">
@@ -187,6 +190,7 @@ const Account = () => {
                             </table>
                             {pets2length > 10?
                             <Link to={"/pets/posted/" + id} className="link-tb">More</Link>: ""}
+                        </div>
                         </div>
                     </div>
                 </div>

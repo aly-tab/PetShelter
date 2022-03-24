@@ -51,16 +51,14 @@ body {
   background-color: rgb(255, 242, 129);
   font-size: 1.5em;
   font-weight: 600;
+  width: 70%;
+  margin: 0 auto;
 }
 
 th {
   padding-left: 150px !important;
   border-bottom: 5px solid black;
   height: 25px;
-}
-
-#front-page {
-  padding: 0 300px;
 }
 
 .link-tb {
@@ -218,7 +216,7 @@ td {
 
 img {
   margin-bottom: 35px;
-  width: 500px;
+  width: 90%;
 }
 
 #account-page {
@@ -233,16 +231,22 @@ img {
 
 .container {
   text-align: center;
+  display: flex;
+  justify-content: space-between;
+
 }
 
-.cont {
-  height: 650px;
+.cont-1 {
+  border: 5px solid black;
+}
+
+.cont-2 {
   background-color: rgb(255, 242, 129);
   border: 5px solid black;
 }
 
 #diff th, #diff td {
-  padding-left: 100px !important;
+  padding-left: 150px;
   border-bottom: 1px solid black;
   font-size: 1em;
 }
@@ -292,5 +296,198 @@ img {
   color: rgb(0, 102, 255);
   border: 5px solid rgb(0, 102, 255);
 }
+
+
+@media only screen and (max-width: 1700px) {
+  #diff {
+    font-size: 1em;
+  }
+
+}
+
+@media only screen and (max-width: 1500px) {
+  #diff {
+    font-size: 0.7em;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  #diff th, #diff td {
+    padding-left: 100px !important;
+  }
+
+  .container {
+    justify-content: space-evenly;
+  
+  }
+
+}
+
+@media only screen and (max-width: 1300px) {
+  #diff th, #diff td {
+    padding-left: 50px !important;
+  }
+}
+
+@media only screen and (max-width: 870px) {
+  .table {
+    font-size: 1em;
+  }
+  th {
+    padding-left: 15% !important; 
+  }
+  #table td {
+    padding-left: 15% !important;
+  }
+
+  #top-desc {
+    font-size: 1.8em;
+  }
+
+  #form {
+    width: 500px;
+    justify-content: space-between;
+  }
+  #img-field input[type="text"] {
+    width: 420px;
+    height: 35px;
+  }
+
+  #form {
+    font-size: 1em;
+  }
+
+  #img-field p {
+    font-size: 1em;
+  }
+
+  #row {
+    margin: 0 40px;
+    font-size: 1em;
+  }
+
+  #row input {
+    width: 100%;
+    font-size: 1em;
+  }
+  #table th, td {
+    font-size: 0.8em;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  #diff th, #diff td {
+    font-size: 0.5em
+  }
+  #diff th, #diff td {
+    padding-left: 25px !important;
+  }
+  #table th, td {
+    font-size: 0.7em;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  th {
+    padding-left: 10% !important; 
+  }
+  #table td {
+    padding-left: 10% !important;
+  }
+  #top-desc {
+    font-size: 1.4em;
+  }
+  .link {
+    font-size: 1.8em;
+  }
+  #loggedin-link {
+    padding: 30px 0 0 0;
+  }
+  #banner h1 {
+    font-size: 3em;
+    padding: 70px 0;
+  }
+  #top-link {
+    padding: 30px 0 0 0;
+  }
+
+  #row input {
+    width: 100%;
+  }
+
+  #img-field input[type="text"] {
+    width: 420px;
+  }
+
+  h3 {
+    font-size: 1.8em;
+  }
+
+  p {
+    font-size: 0.8em;
+  }
+
+}
+
+@media only screen and (max-width: 600px) {
+  #table th, td {
+    font-size: 0.5em;
+  }
+}
+
+
+@media only screen and (max-width: 500px) {
+  .table {
+    font-size: 0.8em;
+  }
+  th {
+    padding-left: 5% !important; 
+  }
+  #table td {
+    padding-left: 5% !important;
+  }
+
+  #top-desc {
+    font-size: 1em;
+  }
+  .link {
+    font-size: 1.5em;
+  }
+
+  #form {
+    width: 300px
+  }
+
+  #row {
+    margin: 0 10px;
+  }
+
+  #row input {
+    width: 100%;
+  }
+
+  #img-field input[type="text"] {
+    width: 280px;
+  }
+
+  #pet-info {
+    width: 300px;
+  }
+
+  #diff th, #diff td {
+    font-size: 0.35em;
+    padding-left: 25px !important;
+  }
+
+}
+
+@media only screen and (max-width: 450px) {
+  #diff th, #diff td {
+    font-size: 0.34em;
+    padding-left: 25px !important;
+  }
+}
+
+
 
 

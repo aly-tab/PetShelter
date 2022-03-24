@@ -11,6 +11,22 @@ const EditView = () => {
     const [pet, setPet] = useState({});
     const [loaded, setLoaded] = useState(false);
     const [errors, setErrors] = useState([]);
+    const [loggedInUser, setLoggedInUser] = useState(null);
+
+    useEffect(() => {
+        axios.get("http://localhost:8000/api/users/loggedIn", {withCredentials:true})
+            .then(res => {
+                console.log(res.data);
+                setLoggedInUser(res.data);
+            })
+            .catch(err => {
+                console.log(err);
+                if (loggedInUser === null) {
+                    history.push("/"); 
+                }
+            })
+    }, [])
+
     useEffect(() => {
         axios.get('/api/shelter/' + id)
             .then(response => {
@@ -18,6 +34,8 @@ const EditView = () => {
                 if (response.data.name === "CastError") {
                     history.push("/");
                 } else if (response.data.poster_id !== response.data.owner_id) {
+                    history.push("/"); 
+                } else if (loggedInUser._id !== response.data.poster_id) {
                     history.push("/"); 
                 }
                 setPet(response.data);

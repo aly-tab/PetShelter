@@ -215,7 +215,7 @@ td {
 }
 
 #img-field input[type="submit"] {
-  color: black;
+  color: black !important;
 }
 
 img {

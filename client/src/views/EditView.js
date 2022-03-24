@@ -44,7 +44,7 @@ const EditView = () => {
             .catch(err => {
                 console.log(err)
             });
-    }, [])
+    }, [loggedInUser])
 
     const onSubmitHandler = (e, data) => {
         e.preventDefault();

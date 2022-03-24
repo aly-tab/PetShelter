@@ -176,7 +176,7 @@ const Account = () => {
                                     return (
                                         <tr key={index2}>
                                             {loggedInUser._id === pet2.poster_id?<td>{pet2.type}</td>:""}
-                                            {loggedInUser._id === pet2.poster_id?<td>{pet2.name}{pet2.owner_id !== pet2.poster_id? <span> (Adopted)</span>:""}</td>:""}
+                                            {loggedInUser._id === pet2.poster_id?<td>{pet2.name}{pet2.owner_id !== pet2.poster_id? <span>(Adopted)</span>:""}</td>:""}
                                             {loggedInUser._id === pet2.poster_id?
                                             <td>
                                                 <div id="flex-1">

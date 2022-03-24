@@ -14,7 +14,7 @@ const EditView = () => {
     const [loggedInUser, setLoggedInUser] = useState(null);
 
     useEffect(() => {
-        axios.get("http://localhost:8000/api/users/loggedIn", {withCredentials:true})
+        axios.get("/api/users/loggedIn", {withCredentials:true})
             .then(res => {
                 console.log(res.data);
                 setLoggedInUser(res.data);

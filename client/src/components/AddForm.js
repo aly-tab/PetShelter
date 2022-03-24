@@ -49,7 +49,7 @@ const AddForm = props => {
                 <input type="hidden" value={owner_id} name="owner_id"/>
             </div>           
             <div id="input-btn">
-            <input type="submit" value="Add Pet" class="form-btn" autocomplete="off"/>
+            <input type="submit" value="Add Pet" class="form-btn"/>
             </div>
         </form>
     )

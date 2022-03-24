@@ -214,6 +214,10 @@ td {
   width: 600px;
 }
 
+#img-field input[type="submit"] {
+  color: black;
+}
+
 img {
   margin-bottom: 35px;
   width: 90%;

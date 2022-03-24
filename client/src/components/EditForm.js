@@ -70,7 +70,7 @@ const EditForm = props => {
                 </div>
             </div>
             <div id="input-btn">
-                <input type="submit" value="Edit Pet" class="form-btn"/>
+                <input type="submit" value="Edit Pet" class="form-btn" autocomplete="off"/>
             </div>
         </form>
     )
